@@ -1,13 +1,17 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import styles from './styles';
+import {Text} from 'react-native';
+import styles, {Container} from './styles';
 
-const Counter: React.FC = () => {
+interface CounterProps {
+  title: string;
+}
+
+const Counter: React.FC<CounterProps> = ({title}) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.titleText}>Counter 1</Text>
+    <Container active={true}>
+      <Text style={styles.titleText}>{title}</Text>
       <Text style={styles.counterText}>0008</Text>
-    </View>
+    </Container>
   );
 };
 
