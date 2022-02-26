@@ -13,15 +13,15 @@ const {Navigator, Screen} = createBottomTabNavigator<RootTabsParamsList>();
 const tabsScreenProps: BottomTabNavigationOptions = {
   headerShown: false,
   tabBarStyle: {
-    height: 80,
+    height: 70,
     backgroundColor: colors.primary.dark,
   },
-  tabBarItemStyle: {height: 50},
+  tabBarItemStyle: {height: metrics.spacing.xx_large},
   tabBarLabelStyle: {
     fontSize: metrics.font_size.xxx_small,
   },
   tabBarActiveTintColor: colors.primary.light,
-  tabBarInactiveTintColor: colors.secondary.default,
+  tabBarInactiveTintColor: colors.secondary.light,
 };
 
 const Root: React.FC = () => {
