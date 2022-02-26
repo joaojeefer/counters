@@ -3,7 +3,7 @@ export enum RootRoutes {
   CONFIG = 'Config',
 }
 
-export type RootStackParamsList = {
+export type RootTabsParamsList = {
   Counters: undefined;
   Config: undefined;
 };

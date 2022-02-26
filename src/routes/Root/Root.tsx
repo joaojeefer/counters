@@ -1,15 +1,15 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Config, Counters} from '../../screens';
-import {RootRoutes, RootStackParamsList} from '../types';
+import {RootRoutes, RootTabsParamsList} from '../types';
 
-const {Navigator, Screen} = createNativeStackNavigator<RootStackParamsList>();
+const {Navigator, Screen} = createBottomTabNavigator<RootTabsParamsList>();
 
 const Root: React.FC = () => {
   return (
     <NavigationContainer>
-      <Navigator>
+      <Navigator screenOptions={{headerShown: false}}>
         <Screen name={RootRoutes.COUNTERS} component={Counters} />
         <Screen name={RootRoutes.CONFIG} component={Config} />
       </Navigator>
