@@ -1,3 +1,4 @@
+import Counter from './Counter';
 import EmptyList from './EmptyList';
 
-export {EmptyList};
+export {Counter, EmptyList};
