@@ -1,8 +1,8 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Root as RootRoutes} from './routes';
 
 const App: React.FC = () => {
-  return <View />;
+  return <RootRoutes />;
 };
 
 export default App;
