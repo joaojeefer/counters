@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colors.primary.dark,
     justifyContent: 'flex-end',
-    paddingHorizontal: metrics.spacing.medium,
+    paddingHorizontal: metrics.spacing.small,
+    paddingBottom: metrics.spacing.xx_small,
   },
   titleText: {
     fontSize: metrics.font_size.x_large,
