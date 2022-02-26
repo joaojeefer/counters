@@ -6,7 +6,7 @@ const colors = {
   },
   secondary: {
     dark: '#333333',
-    default: '##8e8e93',
+    default: '#8e8e93',
     light: '#d8d8d8',
     lightest: '#ffffff',
   },
