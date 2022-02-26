@@ -7,6 +7,7 @@ import {
 import {Config, Counters} from '../../screens';
 import {RootRoutes, RootTabsParamsList} from '../types';
 import {colors, metrics} from '../../styles';
+import {StatusBar} from 'react-native';
 
 const {Navigator, Screen} = createBottomTabNavigator<RootTabsParamsList>();
 
@@ -26,12 +27,18 @@ const tabsScreenProps: BottomTabNavigationOptions = {
 
 const Root: React.FC = () => {
   return (
-    <NavigationContainer>
-      <Navigator screenOptions={tabsScreenProps}>
-        <Screen name={RootRoutes.COUNTERS} component={Counters} />
-        <Screen name={RootRoutes.CONFIG} component={Config} />
-      </Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar
+        backgroundColor={colors.primary.dark}
+        barStyle="light-content"
+      />
+      <NavigationContainer>
+        <Navigator screenOptions={tabsScreenProps}>
+          <Screen name={RootRoutes.COUNTERS} component={Counters} />
+          <Screen name={RootRoutes.CONFIG} component={Config} />
+        </Navigator>
+      </NavigationContainer>
+    </>
   );
 };
 
