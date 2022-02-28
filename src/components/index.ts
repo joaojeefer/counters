@@ -1,3 +1,4 @@
+import ActionButton from './ActionButton';
 import Header from './Header';
 
-export {Header};
+export {ActionButton, Header};
