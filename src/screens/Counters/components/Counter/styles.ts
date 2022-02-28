@@ -14,7 +14,9 @@ export const Container = styled.TouchableOpacity<ContainerProps>`
   border-radius: ${metrics.radius.small}px;
   flex-direction: row;
   justify-content: space-between;
-  opacity: ${({active}) => (active ? 1 : metrics.opacity[3])};
+  border-width: ${({active}) => (active ? metrics.border.large : 0)}px;
+  border-color: ${colors.secondary.dark};
+  /* opacity: ${({active}) => (active ? 1 : metrics.opacity[3])}; */
   box-shadow: 0 ${metrics.spacing.xxx_small}px ${metrics.spacing.xx_small}px
     ${colors.secondary.dark};
   elevation: 5;
