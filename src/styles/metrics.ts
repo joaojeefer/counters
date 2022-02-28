@@ -2,6 +2,7 @@ const metrics = {
   border: {
     small: 1,
     medium: 2,
+    large: 4,
   },
   font_size: {
     xxx_small: 12,
