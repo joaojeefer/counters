@@ -23,6 +23,7 @@ const tabsScreenProps: BottomTabNavigationOptions = {
   },
   tabBarActiveTintColor: colors.primary.light,
   tabBarInactiveTintColor: colors.secondary.light,
+  tabBarHideOnKeyboard: true,
 };
 
 const Root: React.FC = () => {
