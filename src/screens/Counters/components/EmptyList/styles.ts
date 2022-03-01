@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {metrics} from '../../../../styles';
+import {colors, metrics} from '../../../../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     fontSize: metrics.font_size.small,
+    color: colors.secondary.dark,
   },
 });
 
