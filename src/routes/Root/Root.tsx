@@ -4,6 +4,7 @@ import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {Config, Counters} from '../../screens';
 import {RootRoutes, RootTabsParamsList} from '../types';
 import {colors, metrics} from '../../styles';
@@ -35,8 +36,28 @@ const Root: React.FC = () => {
       />
       <NavigationContainer>
         <Navigator screenOptions={tabsScreenProps}>
-          <Screen name={RootRoutes.COUNTERS} component={Counters} />
-          <Screen name={RootRoutes.CONFIG} component={Config} />
+          <Screen
+            name={RootRoutes.COUNTERS}
+            component={Counters}
+            options={{
+              tabBarIcon: ({color}) => (
+                <Icon name="list" size={metrics.spacing.medium} color={color} />
+              ),
+            }}
+          />
+          <Screen
+            name={RootRoutes.CONFIG}
+            component={Config}
+            options={{
+              tabBarIcon: ({color}) => (
+                <Icon
+                  name="settings"
+                  size={metrics.spacing.medium}
+                  color={color}
+                />
+              ),
+            }}
+          />
         </Navigator>
       </NavigationContainer>
     </>
