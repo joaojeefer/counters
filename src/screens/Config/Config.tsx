@@ -6,8 +6,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {ActionButton, Header} from '../../components';
 import {CounterContext} from '../../contexts/CounterContext';
+import {colors, metrics} from '../../styles';
 import styles from './styles';
 
 const Config: React.FC = () => {
@@ -49,7 +51,11 @@ const Config: React.FC = () => {
               disabled={counters.length < 1}
               style={styles.inputButton}
               onPress={() => incrementActiveCounter(Number(increment))}>
-              <Text style={styles.inputButtonText}>+</Text>
+              <Icon
+                name="add"
+                size={metrics.spacing.medium}
+                color={colors.secondary.lightest}
+              />
             </TouchableOpacity>
           </View>
           <View style={styles.inputRow}>
@@ -65,7 +71,11 @@ const Config: React.FC = () => {
               disabled={counters.length < 1}
               style={styles.inputButton}
               onPress={() => decrementActiveCounter(Number(decrement))}>
-              <Text style={styles.inputButtonText}>-</Text>
+              <Icon
+                name="remove"
+                size={metrics.spacing.medium}
+                color={colors.secondary.lightest}
+              />
             </TouchableOpacity>
           </View>
           <ActionButton title="Reset Counter" onPress={resetActiveCounter} />

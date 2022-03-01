@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   inputButton: {
     height: metrics.spacing.x_large,
     width: metrics.spacing.xx_large,
-    paddingHorizontal: metrics.spacing.small,
+    paddingHorizontal: metrics.spacing.x_small,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.primary.dark,
